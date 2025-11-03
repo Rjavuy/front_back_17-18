@@ -1,0 +1,224 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Проекты - Портфолио студента</title>
+    <meta name="description" content="Коллекция моих учебных и личных проектов по веб-разработке">
+    <link rel="stylesheet" href="../style/styles.css">
+    <link rel="icon" href ="https://img.icons8.com/?size=100&id=5J0YM2MKuxZO&format=png&color=000000">
+</head>
+<body>
+    <a href="#main-content" class="sr-only">Перейти к основному содержимому</a>
+    
+    <div class="page">
+        <header class="header" role="banner">
+            <div class="container">
+                <div class="header__content">
+                    <h1 class="header__title">Мои проекты</h1>
+                    <p class="header__subtitle">Коллекция учебных и личных работ</p>
+                </div>
+            </div>
+        </header>
+        
+        <nav class="nav" aria-label="Основная навигация">
+            <div class="container">
+                <ul class="nav__list" role="menubar">
+                    <li class="nav__item" role="none">
+                        <a href="../index.html" class="nav__link" role="menuitem">Главная</a>
+                    </li>
+                    <li class="nav__item nav__item--active" role="none">
+                        <a href="projects.html" class="nav__link" role="menuitem" aria-current="page">Проекты</a>
+                    </li>
+                    <li class="nav__item" role="none">
+                        <a href="diary.html" class="nav__link" role="menuitem">Дневник</a>
+                    </li>
+                    <li class="nav__item" role="none">
+                        <a href="contacts.html" class="nav__link" role="menuitem">Контакты</a>
+                    </li>
+                </ul>
+            </div>
+        </nav>
+
+        <main class="main" id="main-content" role="main">
+            <div class="container">
+                <div class="projects__header">
+                    <h2 class="section-title">Все проекты</h2>
+                    <div class="projects__filters" role="group" aria-label="Фильтры проектов">
+                        <button class="filter filter--active" data-filter="all" aria-pressed="true">
+                            Все
+                        </button>
+                        <button class="filter" data-filter="html" aria-pressed="false">
+                            HTML/CSS
+                        </button>
+                        <button class="filter" data-filter="js" aria-pressed="false">
+                            JavaScript
+                        </button>
+                        <button class="filter" data-filter="bootstrap" aria-pressed="false">
+                            Bootstrap
+                        </button>
+                        <button class="filter" data-filter="react" aria-pressed="false">
+                            React
+                        </button>
+                    </div>
+                </div>
+
+                <div class="projects__grid" role="list" aria-label="Список проектов">
+                    <!-- Проект 1 -->
+                    <article class="project-card" data-category="html" role="listitem" 
+                             onclick="openModal('project1')"
+                             onkeydown="if (event.key === 'Enter' || event.key === ' ') { event.preventDefault(); openModal('project1'); }"
+                             tabindex="0"
+                             aria-label="Личный сайт - проект по HTML/CSS, нажмите для подробной информации">
+                        <div class="project-card__image">
+                            <picture>
+                                <source media="(min-width: 1200px)" srcset="../images/project1-large.jpg">
+                                <source media="(min-width: 768px)" srcset="../images/project1-medium.jpg">
+                                <img src="../images/project1-small.jpg" alt="Скриншот личного сайта - современный дизайн с синей цветовой схемой" loading="lazy">
+                            </picture>
+                        </div>
+                        <div class="project-card__content">
+                            <h3 class="project-card__title">Личный сайт</h3>
+                            <p class="project-card__description">
+                                Адаптивный сайт-портфолио с современным дизайном и семантической версткой
+                            </p>
+                            <div class="project-card__tags">
+                                <span class="tag">HTML</span>
+                                <span class="tag">CSS</span>
+                                <span class="tag">JavaScript</span>
+                                <span class="tag">Responsive</span>
+                            </div>
+                        </div>
+                    </article>
+
+                    <!-- Остальные проекты с аналогичными улучшениями доступности -->
+                    <!-- Проект 2 -->
+                    <article class="project-card" data-category="js" role="listitem"
+                             onclick="openModal('project2')"
+                             onkeydown="if (event.key === 'Enter' || event.key === ' ') { event.preventDefault(); openModal('project2'); }"
+                             tabindex="0"
+                             aria-label="Todo приложение - JavaScript проект, нажмите для подробной информации">
+                        <div class="project-card__image">
+                            <picture>
+                               
+                                <img src="../images/project2-small.jpg" alt="Скриншот Todo приложения - интерфейс управления задачами" loading="lazy">
+                            </picture>
+                        </div>
+                        <div class="project-card__content">
+                            <h3 class="project-card__title">Todo приложение</h3>
+                            <p class="project-card__description">
+                                Приложение для управления задачами с сохранением в LocalStorage
+                            </p>
+                            <div class="project-card__tags">
+                                <span class="tag">JavaScript</span>
+                                <span class="tag">LocalStorage</span>
+                                <span class="tag">DOM</span>
+                            </div>
+                        </div>
+                    </article>
+
+                    <!-- Добавьте остальные проекты по аналогии -->
+                </div>
+            </div>
+        </main>
+
+        <!-- Модальные окна для проектов с улучшенной доступностью -->
+        <div id="project1" class="modal" role="dialog" aria-modal="true" aria-labelledby="project1-title" aria-describedby="project1-desc">
+            <div class="modal-content">
+                <button class="close-modal" onclick="closeModal('project1')" aria-label="Закрыть диалоговое окно">
+                    &times;
+                    <span class="sr-only">Закрыть</span>
+                </button>
+                <h3 id="project1-title">Личный сайт</h3>
+                <p id="project1-desc"><strong>Описание:</strong> Создание персонального веб-сайта с использованием современных технологий HTML5 и CSS3. Адаптивный дизайн, семантическая верстка.</p>
+                <p><strong>Технологии:</strong> HTML, CSS, JavaScript, Responsive Design</p>
+                <div class="project-screenshots">
+                    <div class="screenshot-placeholder" role="img" aria-label="Место для скриншота проекта Личный сайт">
+                        Скриншот проекта 1
+                    </div>
+                </div>
+                <div class="project-links">
+                    <a href="#" class="button button--primary" aria-label="Посмотреть живую версию проекта Личный сайт">
+                        Живая версия
+                    </a>
+                    <a href="#" class="button button--outline" aria-label="Посмотреть исходный код проекта Личный сайт на GitHub">
+                        Исходный код
+                    </a>
+                </div>
+            </div>
+        </div>
+
+        <!-- Добавьте остальные модальные окна по аналогии -->
+
+        <footer class="footer" role="contentinfo">
+            <div class="container">
+                <div class="footer__content">
+                    <p class="footer__copyright">&copy; 2025 StudentDev Portfolio</p>
+                    <div class="footer__links">
+                        <a href="mailto:student@edu.ru" class="footer__link">student@edu.ru</a>
+                        <a href="https://github.com" class="footer__link">GitHub</a>
+                        <a href="contacts.html" class="footer__link">Контакты</a>
+                    </div>
+                </div>
+            </div>
+        </footer>
+    </div>
+
+    <script src="../js/scripts.js"></script>
+    <script>
+        // Уникальный скрипт для страницы проектов
+        document.addEventListener('DOMContentLoaded', function() {
+            const filters = document.querySelectorAll('.filter');
+            const projects = document.querySelectorAll('.project-card');
+            const projectGrid = document.querySelector('.projects__grid');
+
+            // Обновление состояния кнопок фильтра
+            function updateFilterStates(activeFilter) {
+                filters.forEach(btn => {
+                    const isActive = btn === activeFilter;
+                    btn.setAttribute('aria-pressed', isActive.toString());
+                    btn.classList.toggle('filter--active', isActive);
+                });
+            }
+
+            // Фильтрация проектов
+            filters.forEach(button => {
+                button.addEventListener('click', function() {
+                    updateFilterStates(this);
+                    
+                    const filter = this.getAttribute('data-filter');
+                    let visibleCount = 0;
+                    
+                    projects.forEach(project => {
+                        const category = project.getAttribute('data-category');
+                        const shouldShow = filter === 'all' || category === filter;
+                        
+                        project.style.display = shouldShow ? 'block' : 'none';
+                        project.setAttribute('aria-hidden', (!shouldShow).toString());
+                        
+                        if (shouldShow) visibleCount++;
+                    });
+
+                    // Обновляем описание для скринридеров
+                    projectGrid.setAttribute('aria-label', `Список проектов. Показано ${visibleCount} из ${projects.length} проектов`);
+                    
+                    // Анонсируем изменение для скринридеров
+                    if (typeof announceToScreenReader === 'function') {
+                        announceToScreenReader(`Показано ${visibleCount} проектов по фильтру ${this.textContent.trim()}`);
+                    }
+                });
+
+                button.addEventListener('keydown', function(e) {
+                    if (e.key === 'Enter' || e.key === ' ') {
+                        e.preventDefault();
+                        this.click();
+                    }
+                });
+            });
+
+            // Инициализация состояний
+            updateFilterStates(document.querySelector('.filter--active'));
+        });
+    </script>
+</body>
+</html>

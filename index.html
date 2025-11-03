@@ -1,0 +1,232 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Главная - Портфолио студента Максимова Максима</title>
+    <meta name="description" content="Портфолио студента-разработчика Максимова Максима Эдуардовича. Веб-разработка, HTML, CSS, JavaScript, проекты">
+    <link rel="stylesheet" href="style/styles.css">
+    <link rel="icon" href ="https://img.icons8.com/?size=100&id=5J0YM2MKuxZO&format=png&color=000000">
+</head>
+<body>
+    <a href="#main-content" class="sr-only">Перейти к основному содержимому</a>
+    
+    <div class="page">
+        <header class="header" role="banner">
+            <div class="container">
+                <div class="header__content">
+                    <h1 class="header__title">Максимов Максим Эдуардович</h1>
+                    <p class="header__subtitle">Студент-разработчик</p>
+                </div>
+            </div>
+        </header>
+        
+        <nav class="nav" aria-label="Основная навигация">
+            <div class="container">
+                <ul class="nav__list" role="menubar">
+                    <li class="nav__item nav__item--active" role="none">
+                        <a href="index.html" class="nav__link" role="menuitem" aria-current="page">Главная</a>
+                    </li>
+                    <li class="nav__item" role="none">
+                        <a href="pages/projects.html" class="nav__link" role="menuitem">Проекты</a>
+                    </li>
+                    <li class="nav__item" role="none">
+                        <a href="pages/diary.html" class="nav__link" role="menuitem">Дневник</a>
+                    </li>
+                    <li class="nav__item" role="none">
+                        <a href="pages/contacts.html" class="nav__link" role="menuitem">Контакты</a>
+                    </li>
+                </ul>
+            </div>
+        </nav>
+
+        <main class="main" id="main-content" role="main">
+            <div class="container">
+                <!-- Hero Section -->
+                <section class="hero" aria-labelledby="hero-title">
+                    <div class="hero__content">
+                        <div class="hero__image">
+                            <img src="../images/avatar.jpg" 
+                                 alt="Фотография студента Максимова Максима" 
+                                 class="hero__photo"
+                                 loading="eager">
+                        </div>
+                        <div class="hero__info">
+                            <h2 id="hero-title" class="hero__greeting">Привет! Я студент</h2>
+                            <p class="hero__description">
+                                Факультет информационных технологий, группа ЭФБО-11-24<br>
+                                Увлекаюсь веб-разработкой и созданием современных интерфейсов
+                            </p>
+                            <a href="assets/resume.pdf" 
+                               download="resume.pdf" 
+                               class="download-btn"
+                               aria-label="Скачать резюме Максимова Максима в формате PDF">
+                                📄 Скачать резюме
+                            </a>
+                        </div>
+                    </div>
+                </section>
+
+                <section class="about" aria-labelledby="about-title">
+                    <h2 id="about-title" class="about__title">Обо мне</h2>
+                    <p class="about__text">
+                        Я студент. Изучаю HTML, CSS, JavaScript и различные фреймворки. 
+                        Стремлюсь стать профессиональным разработчиком и создавать качественные веб-приложения.
+                        Люблю решать сложные задачи и постоянно учусь новым технологиям.
+                    </p>
+                </section>
+
+                <!-- Skills Section -->
+                <section class="skills" aria-labelledby="skills-title">
+                    <h2 id="skills-title" class="section-title">Мои навыки</h2>
+                    <div class="skills__grid" role="list">
+                        <div class="skill" role="listitem">
+                            <div class="skill__header">
+                                <span class="skill__name">HTML/CSS</span>
+                                <span class="skill__percent" aria-label="Уровень владения: 90 процентов">90%</span>
+                            </div>
+                            <div class="skill__progress" role="progressbar" aria-valuenow="90" aria-valuemin="0" aria-valuemax="100">
+                                <div class="skill__progress-bar" style="width: 90%"></div>
+                            </div>
+                        </div>
+                        <div class="skill" role="listitem">
+                            <div class="skill__header">
+                                <span class="skill__name">JavaScript</span>
+                                <span class="skill__percent" aria-label="Уровень владения: 80 процентов">80%</span>
+                            </div>
+                            <div class="skill__progress" role="progressbar" aria-valuenow="80" aria-valuemin="0" aria-valuemax="100">
+                                <div class="skill__progress-bar" style="width: 80%"></div>
+                            </div>
+                        </div>
+                        <div class="skill" role="listitem">
+                            <div class="skill__header">
+                                <span class="skill__name">Bootstrap</span>
+                                <span class="skill__percent" aria-label="Уровень владения: 85 процентов">85%</span>
+                            </div>
+                            <div class="skill__progress" role="progressbar" aria-valuenow="85" aria-valuemin="0" aria-valuemax="100">
+                                <div class="skill__progress-bar" style="width: 85%"></div>
+                            </div>
+                        </div>
+                        <div class="skill" role="listitem">
+                            <div class="skill__header">
+                                <span class="skill__name">React</span>
+                                <span class="skill__percent" aria-label="Уровень владения: 60 процентов">60%</span>
+                            </div>
+                            <div class="skill__progress" role="progressbar" aria-valuenow="60" aria-valuemin="0" aria-valuemax="100">
+                                <div class="skill__progress-bar" style="width: 60%"></div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+
+                <!-- Projects Preview -->
+                <section class="projects-preview" aria-labelledby="projects-title">
+                    <h2 id="projects-title" class="section-title">Лучшие проекты</h2>
+                    <div class="projects-preview__grid" role="list">
+                        <article class="project-card" 
+                                 role="listitem"
+                                 onclick="openModal('project1')"
+                                 onkeydown="if (event.key === 'Enter' || event.key === ' ') { event.preventDefault(); openModal('project1'); }"
+                                 tabindex="0"
+                                 aria-label="Личный сайт - проект по веб-разработке, нажмите для подробной информации">
+                            <div class="project-card__image">
+                                <img src="images/project1-small.jpg" 
+                                     alt="Скриншот личного сайта - главная страница портфолио" 
+                                     loading="lazy">
+                            </div>
+                            <div class="project-card__content">
+                                <h3 class="project-card__title">Личный сайт</h3>
+                                <p class="project-card__description">
+                                    Адаптивный сайт-портфолио на HTML и CSS
+                                </p>
+                                <div class="project-card__tags">
+                                    <span class="tag">HTML</span>
+                                    <span class="tag">CSS</span>
+                                    <span class="tag">JavaScript</span>
+                                </div>
+                            </div>
+                        </article>
+                        <!-- Остальные проекты... -->
+                    </div>
+                </section>
+            </div>
+        </main>
+
+        <footer class="footer" role="contentinfo">
+            <div class="container">
+                <div class="footer__content">
+                    <p class="footer__copyright">&copy; 2025 StudentDev Portfolio</p>
+                    <div class="footer__links">
+                        <a href="mailto:student@edu.ru" class="footer__link">student@edu.ru</a>
+                        <a href="https://github.com" class="footer__link">GitHub</a>
+                        <a href="pages/contacts.html" class="footer__link">Контакты</a>
+                    </div>
+                </div>
+            </div>
+        </footer>
+    </div>
+
+    <!-- Модальное окно для проекта -->
+    <div id="project1" class="modal" role="dialog" aria-modal="true" aria-labelledby="project1-title" aria-describedby="project1-desc">
+        <div class="modal-content">
+            <button class="close-modal" 
+                    onclick="closeModal('project1')" 
+                    aria-label="Закрыть диалоговое окно с информацией о проекте">
+                &times;
+                <span class="sr-only">Закрыть</span>
+            </button>
+            <h3 id="project1-title">Личный сайт</h3>
+            <p id="project1-desc">Адаптивный сайт-портфолио с современным дизайном и семантической версткой</p>
+            <div class="project-screenshots">
+                <div class="screenshot-placeholder" role="img" aria-label="Место для скриншота проекта Личный сайт">
+                    Скриншот проекта
+                </div>
+            </div>
+            <div class="project-links">
+                <a href="#" class="button button--primary" aria-label="Посмотреть живую версию проекта Личный сайт">
+                    Живая версия
+                </a>
+                <a href="#" class="button button--outline" aria-label="Посмотреть исходный код проекта Личный сайт на GitHub">
+                    Исходный код
+                </a>
+            </div>
+        </div>
+    </div>
+
+    <script src="js/scripts.js"></script>
+    <script>
+        // Проверка загрузки фото и улучшенная обработка ошибок
+        document.addEventListener('DOMContentLoaded', function() {
+            const photo = document.querySelector('.hero__photo');
+            if (photo) {
+                photo.onerror = function() {
+                    console.error('Фото не загружено! Проверьте путь:', this.src);
+                    this.style.border = '2px dashed var(--error-color)';
+                    this.alt = 'Фото не найдено - проверьте images/avatar.jpg';
+                    
+                    // Создаем доступный placeholder
+                    this.src = 'data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMjAwIiBoZWlnaHQ9IjIwMCIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj48cmVjdCB3aWR0aD0iMTAwJSIgaGVpZ2h0PSIxMDAlIiBmaWxsPSIjZjhjYzAwIi8+PHRleHQgeD0iNTAlIiB5PSI1MCUiIGZvbnQtZmFtaWx5PSJBcmlhbCIgZm9udC1zaXplPSIxOCIgZmlsbD0iIzc1NzU3NSIgdGV4dC1hbmNob3I9Im1pZGRsZSIgZHk9Ii4zZW0iPkZvdG8gbm90IGZvdW5kPC90ZXh0Pjwvc3ZnPg==';
+                    this.setAttribute('aria-label', 'Заглушка для фотографии - изображение не загружено');
+                };
+                photo.onload = function() {
+                    console.log('Фото успешно загружено:', this.src);
+                    this.setAttribute('aria-label', 'Фотография студента Максимова Максима');
+                };
+            }
+
+            // Инициализация прогресс-баров с доступностью
+            const progressBars = document.querySelectorAll('[role="progressbar"]');
+            progressBars.forEach(bar => {
+                const value = bar.getAttribute('aria-valuenow');
+                const progress = bar.querySelector('.skill__progress-bar, .course__progress-bar');
+                if (progress && value) {
+                    progress.style.width = '0';
+                    setTimeout(() => {
+                        progress.style.width = value + '%';
+                    }, 500);
+                }
+            });
+        });
+    </script>
+</body>
+</html>

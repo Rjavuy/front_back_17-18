@@ -1,0 +1,307 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Контакты - Портфолио студента</title>
+    <meta name="description" content="Свяжитесь со мной через форму обратной связи или используйте контактную информацию">
+    <link rel="stylesheet" href="../style/styles.css">
+    <link rel="icon" href ="https://img.icons8.com/?size=100&id=5J0YM2MKuxZO&format=png&color=000000">
+</head>
+<body>
+    <a href="#main-content" class="sr-only">Перейти к основному содержимому</a>
+    
+    <div class="page">
+        <header class="header" role="banner">
+            <div class="container">
+                <div class="header__content">
+                    <h1 class="header__title">Контакты</h1>
+                    <p class="header__subtitle">Свяжитесь со мной</p>
+                </div>
+            </div>
+        </header>
+        
+        <nav class="nav" aria-label="Основная навигация">
+            <div class="container">
+                <ul class="nav__list" role="menubar">
+                    <li class="nav__item" role="none">
+                        <a href="../index.html" class="nav__link" role="menuitem">Главная</a>
+                    </li>
+                    <li class="nav__item" role="none">
+                        <a href="projects.html" class="nav__link" role="menuitem">Проекты</a>
+                    </li>
+                    <li class="nav__item" role="none">
+                        <a href="diary.html" class="nav__link" role="menuitem">Дневник</a>
+                    </li>
+                    <li class="nav__item nav__item--active" role="none">
+                        <a href="contacts.html" class="nav__link" role="menuitem" aria-current="page">Контакты</a>
+                    </li>
+                </ul>
+            </div>
+        </nav>
+
+        <main class="main" id="main-content" role="main">
+            <div class="container">
+                <h2 class="section-title">Свяжитесь со мной</h2>
+                
+                <div class="contacts__content">
+                    <!-- Контактная форма -->
+                    <section class="contact-form" aria-labelledby="form-title">
+                        <h3 id="form-title" class="contact-info__title">Форма обратной связи</h3>
+                        <form class="form" id="contactForm" novalidate>
+                            <div class="form__group">
+                                <label for="name" class="form__label required">Имя</label>
+                                <input type="text" 
+                                       id="name" 
+                                       name="name" 
+                                       class="form__input" 
+                                       required 
+                                       aria-required="true"
+                                       aria-describedby="name-help"
+                                       placeholder="Введите ваше имя">
+                                <div id="name-help" class="form__error" role="alert">
+                                    Пожалуйста, введите ваше имя
+                                </div>
+                            </div>
+                            
+                            <div class="form__group">
+                                <label for="email" class="form__label required">Email</label>
+                                <input type="email" 
+                                       id="email" 
+                                       name="email" 
+                                       class="form__input" 
+                                       required 
+                                       aria-required="true"
+                                       aria-describedby="email-help"
+                                       placeholder="example@mail.ru">
+                                <div id="email-help" class="form__error" role="alert">
+                                    Пожалуйста, введите корректный email адрес
+                                </div>
+                            </div>
+                            
+                            <div class="form__group">
+                                <label for="subject" class="form__label">Тема сообщения</label>
+                                <input type="text" 
+                                       id="subject" 
+                                       name="subject" 
+                                       class="form__input" 
+                                       aria-describedby="subject-help"
+                                       placeholder="Тема сообщения">
+                                <div id="subject-help" class="form__error">
+                                    Необязательное поле
+                                </div>
+                            </div>
+                            
+                            <div class="form__group">
+                                <label for="message" class="form__label required">Сообщение</label>
+                                <textarea id="message" 
+                                          name="message" 
+                                          class="form__textarea" 
+                                          rows="5" 
+                                          required 
+                                          aria-required="true"
+                                          aria-describedby="message-help"
+                                          placeholder="Опишите ваш вопрос или проблему..."></textarea>
+                                <div id="message-help" class="form__error" role="alert">
+                                    Пожалуйста, введите ваше сообщение
+                                </div>
+                            </div>
+                            
+                            <button type="submit" class="button button--primary form__button">
+                                Отправить сообщение
+                            </button>
+                        </form>
+                    </section>
+                    
+                    <!-- Контактная информация -->
+                    <section class="contact-info" aria-labelledby="contacts-title">
+                        <h3 id="contacts-title" class="contact-info__title">Мои контакты</h3>
+                        <div class="contact-info__items">
+                            <div class="contact-item">
+                                <div class="contact-item__icon" aria-hidden="true">📧</div>
+                                <div class="contact-item__content">
+                                    <h4 class="contact-item__title">Электронная почта</h4>
+                                    <p class="contact-item__value">
+                                        <a href="mailto:student@edu.ru" class="social-link">student@edu.ru</a>
+                                    </p>
+                                </div>
+                            </div>
+                            
+                            <div class="contact-item">
+                                <div class="contact-item__icon" aria-hidden="true">📱</div>
+                                <div class="contact-item__content">
+                                    <h4 class="contact-item__title">Телефон</h4>
+                                    <p class="contact-item__value">
+                                        <a href="tel:+74951234567" class="social-link">+7 (495) 123-45-67</a>
+                                    </p>
+                                </div>
+                            </div>
+                            
+                            <div class="contact-item">
+                                <div class="contact-item__icon" aria-hidden="true">🌐</div>
+                                <div class="contact-item__content">
+                                    <h4 class="contact-item__title">Социальные сети</h4>
+                                    <p class="contact-item__value">
+                                        <a href="https://vk.com" class="social-link" aria-label="Мой профиль ВКонтакте">VK</a> | 
+                                        <a href="https://github.com" class="social-link" aria-label="Мой профиль на GitHub">GitHub</a> | 
+                                        <a href="https://t.me" class="social-link" aria-label="Мой Telegram">Telegram</a>
+                                    </p>
+                                </div>
+                            </div>
+                            
+                            <div class="contact-item">
+                                <div class="contact-item__icon" aria-hidden="true">📍</div>
+                                <div class="contact-item__content">
+                                    <h4 class="contact-item__title">Адрес</h4>
+                                    <p class="contact-item__value">
+                                        г. Москва, ул. Пушкина, д. Колотушкина
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                    </section>
+                </div>
+
+                <!-- Демонстрация адаптивных изображений -->
+                <section class="about" style="margin-top: var(--space-2xl);" aria-labelledby="images-title">
+                    <h2 id="images-title" class="about__title">Адаптивные изображения в контактах</h2>
+                    
+                    <!-- Пример адаптивной галереи -->
+                    <div class="gallery" role="group" aria-label="Галерея изображений контактов">
+                        <div class="gallery__item">
+                            <div class="gallery__image-container">
+                                <img src="../images/avatar.jpg" alt="Фото офиса - рабочий стол с компьютером" class="gallery__image" loading="lazy">
+                            </div>
+                        </div>
+                        <div class="gallery__item">
+                            <div class="gallery__image-container">
+                                <img src="../images/avatar.jpg" alt="Фото рабочего пространства - книги и ноутбук" class="gallery__image" loading="lazy">
+                            </div>
+                        </div>
+                        <div class="gallery__item">
+                            <div class="gallery__image-container">
+                                <img src="../images/avatar.jpg" alt="Фото встречи с коллегами" class="gallery__image" loading="lazy">
+                            </div>
+                        </div>
+                        <div class="gallery__item">
+                            <div class="gallery__image-container">
+                                <img src="../images/avatar.jpg" alt="Фото рабочего процесса" class="gallery__image" loading="lazy">
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Пример picture element -->
+                    <div style="margin-top: var(--space-lg);">
+                        <h3>Пример адаптивного изображения с форматами</h3>
+                        <picture>
+                            <source media="(min-width: 1200px)" srcset="../images/avatar.jpg">
+                            <source media="(min-width: 768px)" srcset="../images/avatar.jpg">
+                            <img src="../images/avatar.jpg" alt="Адаптивное изображение рабочего процесса" class="responsive-image" loading="lazy">
+                        </picture>
+                    </div>
+                </section>
+            </div>
+        </main>
+
+        <footer class="footer" role="contentinfo">
+            <div class="container">
+                <div class="footer__content">
+                    <p class="footer__copyright">&copy; 2025 StudentDev Portfolio</p>
+                    <div class="footer__links">
+                        <a href="mailto:student@edu.ru" class="footer__link">student@edu.ru</a>
+                        <a href="https://github.com" class="footer__link">GitHub</a>
+                        <a href="contacts.html" class="footer__link">Контакты</a>
+                    </div>
+                </div>
+            </div>
+        </footer>
+    </div>
+
+    <!-- Сообщение об успешной отправке -->
+    <div id="success-message" 
+         class="success-message" 
+         role="status" 
+         aria-live="polite" 
+         aria-atomic="true"
+         style="display: none; position: fixed; top: 20px; right: 20px; background: var(--success-color); color: white; padding: var(--space-md); border-radius: var(--radius-md); z-index: 1001;">
+        Сообщение успешно отправлено!
+    </div>
+
+    <script src="../js/scripts.js"></script>
+    <script>
+        // Уникальный скрипт для страницы контактов
+        document.addEventListener('DOMContentLoaded', function() {
+            const contactForm = document.getElementById('contactForm');
+            const successMessage = document.getElementById('success-message');
+
+            // Валидация формы в реальном времени
+            contactForm.addEventListener('input', function(e) {
+                const target = e.target;
+                if (target.hasAttribute('required') && target.value.trim() === '') {
+                    target.setAttribute('aria-invalid', 'true');
+                } else {
+                    target.setAttribute('aria-invalid', 'false');
+                }
+            });
+
+            // Обработка отправки формы
+            contactForm.addEventListener('submit', function(e) {
+                e.preventDefault();
+                
+                let isValid = true;
+                const requiredFields = this.querySelectorAll('[required]');
+                
+                // Проверка обязательных полей
+                requiredFields.forEach(field => {
+                    if (!field.value.trim()) {
+                        field.setAttribute('aria-invalid', 'true');
+                        isValid = false;
+                    } else {
+                        field.setAttribute('aria-invalid', 'false');
+                    }
+                });
+
+                if (isValid) {
+                    const name = document.getElementById('name').value;
+                    
+                    // Показываем сообщение об успехе
+                    successMessage.style.display = 'block';
+                    successMessage.textContent = `Спасибо, ${name}! Ваше сообщение отправлено.`;
+                    
+                    // Скрываем сообщение через 5 секунд
+                    setTimeout(() => {
+                        successMessage.style.display = 'none';
+                    }, 5000);
+                    
+                    // Сбрасываем форму
+                    contactForm.reset();
+                    
+                    // Возвращаем фокус на первую поле
+                    document.getElementById('name').focus();
+                } else {
+                    // Фокус на первое поле с ошибкой
+                    const firstInvalidField = this.querySelector('[aria-invalid="true"]');
+                    if (firstInvalidField) {
+                        firstInvalidField.focus();
+                    }
+                }
+            });
+
+            // Улучшенная навигация с клавиатурой для галереи
+            const galleryItems = document.querySelectorAll('.gallery__item');
+            galleryItems.forEach((item, index) => {
+                item.setAttribute('tabindex', '0');
+                item.setAttribute('role', 'button');
+                item.setAttribute('aria-label', `Просмотр изображения ${index + 1} из ${galleryItems.length}`);
+                
+                item.addEventListener('keydown', function(e) {
+                    if (e.key === 'Enter' || e.key === ' ') {
+                        e.preventDefault();
+                        this.click();
+                    }
+                });
+            });
+        });
+    </script>
+</body>
+</html>
